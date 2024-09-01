@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Organize your favorite websites effortlessly with our simple bookmark manager. Available as a browser extension for Chrome, Firefox, and Opera. Try it for free!"
+    />
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="./css/style.css" />
+    <script src="./script.js" defer></script>
+    <title>Frontend Mentor | Bookmark landing page</title>
+  </head>
+  <body>
+    <!-- =================================={Header}=================== -->
+    <header id="header" class="header">
+      <!-- =================================={Navigation}=================== -->
+      <nav class="nav">
+        <ul class="nav__list">
+          <!-- Logo -->
+          <li class="nav__logo">
+            <img
+              src="./images/logo-bookmark.svg"
+              alt="An icon of a book mark"
+            />
+          </li>
+          <!-- Menu -->
+          <li class="nav__menu">
+            <img
+              data-open-menu
+              role="menu"
+              src="./images/icon-hamburger.svg"
+              alt="An hamburger icon for the menue"
+            />
+          </li>
+        </ul>
+
+        <ul class="nav__desktop__links">
+          <li><a href="#footer"> Features</a></li>
+          <li><a href="#section-3">Pricing</a></li>
+          <li><a href="#section-2">Contact</a></li>
+          <li><a class="login" href="#section-4">Login</a></li>
+        </ul>
+        <!--==================================={Navigation is opened}================= -->
+        <article class="nav__overlay hide" data-nav-overlay>
+          <section class="nav__overlay__menu" data-menu>
+            <ul class="nav__overlay__header">
+              <!-- Logo -->
+              <li class="nav__logo">
+                <img
+                  src="./images/logo-bookmark.svg"
+                  alt="An icon of a book mark"
+                />
+              </li>
+              <!-- close- Menu -->
+              <li class="nav__close">
+                <img
+                  role="menu"
+                  data-close-menu
+                  src="./images/icon-close.svg"
+                  alt="An close icon for the menue"
+                />
+              </li>
+            </ul>
+            <!-- Menu List -->
+            <ul class="nav__menu__list" data-menu-content>
+              <hr />
+              <li><a data-nav-list href="#section-4"> Features</a></li>
+              <hr />
+              <li><a data-nav-list href="#section-3">Pricing</a></li>
+              <hr />
+              <li><a data-nav-list href="#section-2">Contact</a></li>
+              <hr />
+              <li><a data-nav-list href="#footer">Login</a></li>
+              <hr />
+            </ul>
+            <!-- Socail Handlers -->
+            <div class="nav__media" data-menu-media>
+              <div class="nav__media__handle">
+                <img
+                  src="./images/icon-facebook.svg"
+                  alt="facbook company logo"
+                />
+              </div>
+              <div class="nav__media__handle">
+                <img
+                  src="./images/icon-twitter.svg"
+                  alt="twitter company logo"
+                />
+              </div>
+            </div>
+          </section>
+        </article>
+
+        <aside class="move-up" data-move-up>
+          <a class="move-up__arrow" href="#">
+            <div class="img-container">
+              <img
+                src="./images/icon-arrow.svg"
+                alt="an arrow pointing upwards"
+              />
+            </div>
+          </a>
+        </aside>
+      </nav>
+      <!-- =================================={Heading}=================== -->
+
+      <article class="heading">
+        <section class="heading__img">
+          <div class="heading__img__wrapper">
+            <img
+              src="./images/illustration-hero.svg"
+              alt="An illustration of what the site does"
+            />
+          </div>
+        </section>
+
+        <!-- Heading -->
+        <section class="heading__intro">
+          <div class="heading__intro__wrapper">
+            <h1 class="heading-primary">
+              A Simple Bookmark
+              <span> Manager </span>
+            </h1>
+
+            <p class="heading-p">
+              <span> A clean and simple interface to organize </span>
+              your favourite websites. Open a new
+              <span> browser tab and see your sites load </span>
+              instantly. Try it for free.
+            </p>
+
+            <!-- Buttons -->
+            <div class="heading__button">
+              <a href="#"> Get it on Chrome </a>
+              <a href="#"> Get it on Firefox </a>
+            </div>
+          </div>
+        </section>
+      </article>
+    </header>
+    <!-- =================================={Main}=================== -->
+
+    <main id="main" class="main">
+      <!-- =================================={Features}=================== -->
+
+      <section id="section-1" class="features">
+        <!-- Heading -->
+        <div class="features__heading">
+          <h2 class="heading-secondary">Features</h2>
+          <p class="heading-p">
+            Our aim is to make it quick and easy for you
+            <span> to access your favourite websites. Your</span>
+            bookmarks sync between your devices so
+            <span> you can access them on the go. </span>
+          </p>
+        </div>
+      </section>
+      <!-- Slider for section 1 -->
+      <article class="feature__slider">
+        <!-- Controller -->
+        <div class="feature__slider__control">
+          <hr />
+          <h3 class="heading-third active--control" data-slide-control="0">
+            Simple Bookmarking
+          </h3>
+          <hr />
+          <h3 class="heading-third active--control" data-slide-control="1">
+            Speedy Searching
+          </h3>
+          <hr />
+          <h3 class="heading-third active--control" data-slide-control="2">
+            Easy Sharing
+          </h3>
+          <hr />
+        </div>
+        <!-- Sliders -->
+        <section class="feature__slider__wrapper">
+          <!-- Slider -->
+          <div class="tab__wrapper">
+            <!--First slider container-->
+            <div class="tab__wrapper__slider">
+              <!-- IMG 1 -->
+              <div class="tab__card" data-slider-tab>
+                <img
+                  src="./images/illustration-features-tab-1.svg"
+                  alt="an illustration image of how the bookmarks works"
+                />
+              </div>
+              <!-- IMG 2 -->
+              <div class="tab__card" data-slider-tab>
+                <img
+                  src="./images/illustration-features-tab-2.svg"
+                  alt="an illustration image of how the bookmarks works"
+                />
+              </div>
+              <!-- IMG 3 -->
+              <div class="tab__card" data-slider-tab>
+                <img
+                  src="./images/illustration-features-tab-3.svg"
+                  alt="an illustration image of how the bookmarks works"
+                />
+              </div>
+            </div>
+          </div>
+          <!-- Slider Caption-->
+          <div class="tab__caption">
+            <!-- Card 1 -->
+            <div class="tab__caption__card" data-slider-caption>
+              <h2 class="heading-secondary">Bookmark in one click</h2>
+              <!-- Info -->
+              <p class="heading-p">
+                Organize your bookmarks however you like. Our simple
+                drag-and-drop interface gives you complete control over how you
+                manage your favourite sites.
+              </p>
+              <!-- Button -->
+              <a href="#header">More Info</a>
+            </div>
+            <!-- Card 2 -->
+            <div class="tab__caption__card" data-slider-caption>
+              <h2 class="heading-secondary">Intelligent search</h2>
+              <!-- Info -->
+              <p class="heading-p">
+                Our powerful search feature will help you find saved sites in no
+                time at all. No need to trawl through all of your bookmarks.
+              </p>
+              <!-- Button -->
+              <a href="#header">More Info</a>
+            </div>
+            <!-- Card 3 -->
+            <div class="tab__caption__card" data-slider-caption>
+              <h2 class="heading-secondary">Share your bookmarks</h2>
+              <!-- Info -->
+              <p class="heading-p">
+                Easily share your bookmarks and collections with others. Create
+                a shareable link that you can send at the click of a button.
+              </p>
+              <!-- Button -->
+              <a href="#header">More Info</a>
+            </div>
+          </div>
+        </section>
+      </article>
+      <!-- =================================={Extension}=================== -->
+
+      <section id="section-2" class="extension">
+        <!-- Heading of extension -->
+        <div class="extension__heading">
+          <h2 class="heading-secondary">Download the extension</h2>
+          <p class="heading-p">
+            We’ve got more browsers in the pipeline.<span>
+              Please do let us know if you’ve got a </span
+            >favourite you’d like us to prioritize.
+          </p>
+        </div>
+        <!-- Cards -->
+        <article class="extension__cards">
+          <!-- Chrome-->
+          <div class="extension__cards__container">
+            <!-- img -->
+            <div class="card__img">
+              <img src="./images/logo-chrome.svg" alt="an icon of chrome" />
+            </div>
+
+            <h3 class="heading-third">Add to Chrome</h3>
+            <p class="heading-p">Minimum version 62</p>
+            <div class="card__dot">
+              <img src="./images/bg-dots.svg" alt="" />
+            </div>
+            <a href="#"> Add & Install Extension </a>
+          </div>
+          <!-- Fire Fox-->
+          <div class="extension__cards__container">
+            <!-- img -->
+            <div class="card__img">
+              <img src="./images/logo-firefox.svg" alt="an icon of Firefox" />
+            </div>
+
+            <h3 class="heading-third">Add to Firefox</h3>
+            <p class="heading-p">Minimum version 55</p>
+            <div class="card__dot">
+              <img src="./images/bg-dots.svg" alt="" />
+            </div>
+            <a href="#"> Add & Install Extension </a>
+          </div>
+          <!-- Opera -->
+          <div class="extension__cards__container">
+            <!-- img -->
+            <div class="card__img">
+              <img src="./images/logo-opera.svg" alt="an icon of Opera" />
+            </div>
+
+            <h3 class="heading-third">Add to Opera</h3>
+            <p class="heading-p">Minimum version 42</p>
+            <div class="card__dot">
+              <img src="./images/bg-dots.svg" alt="" />
+            </div>
+            <a href="#"> Add & Install Extension </a>
+          </div>
+        </article>
+      </section>
+      <!-- =================================={FAQ}=================== -->
+
+      <section id="section-3" class="faq">
+        <div class="faq__heading">
+          <h2 class="heading-secondary">
+            Frequently Asked
+            <span> Questions </span>
+          </h2>
+          <p class="heading-p">
+            Here are some of our FAQs. If you have any
+            <span> other questions you’d like answered please </span>
+            feel free to email us.
+          </p>
+        </div>
+
+        <article class="faq__questions">
+          <!-- Question 1 -->
+          <section class="faq__question">
+            <!-- Ques Container -->
+            <div class="faq__ques" data-faq>
+              <!-- Ques -->
+              <h4 class="heading-fourth">What is Bookmark?</h4>
+              <!-- Icon -->
+              <div class="faq__icon" data-faq-icon>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    d="M1 1l8 8 8-8"
+                  />
+                </svg>
+              </div>
+            </div>
+            <hr />
+            <!-- Answer -->
+            <div class="faq__answer" data-faq-answer>
+              <p class="heading-p">
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
+                tincidunt justo eget ultricies fringilla. Phasellus blandit
+                ipsum quis quam ornare mattis.
+              </p>
+            </div>
+          </section>
+          <!-- Question 2 -->
+          <section class="faq__question">
+            <!-- Ques Container -->
+            <div class="faq__ques" data-faq>
+              <!-- Ques -->
+              <h4 class="heading-fourth">How can I request a new browser?</h4>
+              <!-- Icon -->
+              <div class="faq__icon" data-faq-icon>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    d="M1 1l8 8 8-8"
+                  />
+                </svg>
+              </div>
+            </div>
+            <hr />
+            <!-- Answer -->
+            <div class="faq__answer" data-faq-answer>
+              <p class="heading-p">
+                Vivamus luctus eros aliquet convallis ultricies. Mauris augue
+                massa, ultricies non ligula. Suspendisse imperdiet. Vivamus
+                luctus eros aliquet convallis ultricies. Mauris augue massa,
+                ultricies non ligula. Suspendisse imperdie tVivamus luctus eros
+                aliquet convallis ultricies. Mauris augue massa, ultricies non
+                ligula. Suspendisse imperdiet.
+              </p>
+            </div>
+          </section>
+          <!-- Question 3 -->
+          <section class="faq__question">
+            <!-- Ques Container -->
+            <div class="faq__ques" data-faq>
+              <!-- Ques -->
+              <h4 class="heading-fourth">Is there a mobile app?</h4>
+              <!-- Icon -->
+              <div class="faq__icon" data-faq-icon>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    d="M1 1l8 8 8-8"
+                  />
+                </svg>
+              </div>
+            </div>
+            <hr />
+            <!-- Answer -->
+            <div class="faq__answer" data-faq-answer>
+              <p class="heading-p">
+                Sed consectetur quam id neque fermentum accumsan. Praesent
+                luctus vestibulum dolor, ut condimentum urna vulputate eget.
+                Cras in ligula quis est pharetra mattis sit amet pharetra purus.
+                Sed sollicitudin ex et ultricies bibendum.
+              </p>
+            </div>
+          </section>
+          <!-- Question 4 -->
+          <section class="faq__question">
+            <!-- Ques Container -->
+            <div class="faq__ques" data-faq>
+              <!-- Ques -->
+              <h4 class="heading-fourth">
+                What about other Chromium browsers?
+              </h4>
+              <!-- Icon -->
+              <div class="faq__icon" data-faq-icon>
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="12">
+                  <path
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="3"
+                    d="M1 1l8 8 8-8"
+                  />
+                </svg>
+              </div>
+            </div>
+            <hr />
+            <!-- Answer -->
+            <div class="faq__answer" data-faq-answer>
+              <p class="heading-p">
+                Integer condimentum ipsum id imperdiet finibus. Vivamus in
+                placerat mi, at euismod dui. Aliquam vitae neque eget nisl
+                gravida pellentesque non ut velit.
+              </p>
+            </div>
+          </section>
+        </article>
+
+        <div class="faq__button">
+          <a href="#">More info</a>
+        </div>
+      </section>
+      <!-- =================================={Contact}=================== -->
+
+      <section id="section-4" class="contact-us">
+        <!-- {Contact-us heading} -->
+        <div class="contact-us__heading">
+          <h4>35,000+ already joined</h4>
+          <h2 class="heading-secondary">
+            Stay up-to-date with what
+            <span>wer're doing</span>
+          </h2>
+        </div>
+        <!-- TODO: .label--error -->
+        <form class="contact-us__form">
+          <label for="email" data-email>
+            <input
+              id="email"
+              name="email"
+              type="email"
+              placeholder="Enter your email address"
+              required
+            />
+            <h5>whoops, make sure it's an email</h5>
+          </label>
+          <div class="contact-us__button">
+            <button data-submit>Contact Us</button>
+          </div>
+        </form>
+      </section>
+    </main>
+    <!-- =================================={Footer}===============================-->
+
+    <footer id="footer" class="footer">
+      <div class="footer__wrapper">
+        <!-- {Heading} -->
+        <div class="footer__heading">
+          <img src="./images/logo-bookmark.svg" alt="An icon of a book mark" />
+        </div>
+        <!-- {List} -->
+        <ul class="footer__list">
+          <li><a href="#section-1">Features</a></li>
+          <li><a href="#section-2">Pricing</a></li>
+          <li><a href="#section-3"> Contact</a></li>
+        </ul>
+      </div>
+
+      <section class="footer__media">
+        <div class="footer__media__handle" alt="an svg of facbook">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M22.675 0H1.325C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
+            />
+          </svg>
+        </div>
+        <div class="footer__media__handle" alt="an svg of twitter">
+          <svg xmlns="http://www.w3.org/2000/svg">
+            <path
+              fill="currentColor"
+              fill-rule="evenodd"
+              d="M24 2.557a9.83 9.83 0 0 1-2.828.775A4.932 4.932 0 0 0 23.337.608a9.864 9.864 0 0 1-3.127 1.195A4.916 4.916 0 0 0 16.616.248c-3.179 0-5.515 2.966-4.797 6.045A13.978 13.978 0 0 1 1.671 1.149a4.93 4.93 0 0 0 1.523 6.574 4.903 4.903 0 0 1-2.229-.616c-.054 2.281 1.581 4.415 3.949 4.89a4.935 4.935 0 0 1-2.224.084 4.928 4.928 0 0 0 4.6 3.419A9.9 9.9 0 0 1 0 17.54a13.94 13.94 0 0 0 7.548 2.212c9.142 0 14.307-7.721 13.995-14.646A10.025 10.025 0 0 0 24 2.557z"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <p class="footer__attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Peter Godspower</a>.
+      </p>
+    </footer>
+  </body>
+</html>
